@@ -1,0 +1,154 @@
+#mainSingleJObDiv{
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-around;
+  margin: 10px;
+}
+
+#jobs{
+  background-color: rgb(239, 253, 186);
+  border-radius: 15px;
+  /* overflow: hidden; */
+  box-shadow: 0px 0px 2px 2px rgb(44, 15, 15);
+  margin-right: 20px;
+  width: 40%;
+  min-width: 350px;
+}
+
+#jobSearchHead{
+  background-color: rgb(18, 110, 107);
+  color: white;
+  padding: 5px;
+  text-align: center;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
+}
+
+.endividualJob{
+  display: flex;
+  background-color: white;
+  height: 200px;
+  width: calc(100% - 20px);
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 2px black;
+  border-radius: 10px;
+  margin: 10px;
+  position: relative;
+}
+
+.endividualJob * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.endividualJob .likeDiv{
+  color: rgb(18, 110, 107);
+  font-size: 1.5rem;
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+  cursor: pointer;
+}
+
+.endividualJob i:hover{
+  font-size: 1.6rem;
+}
+
+.jobInfo{
+  margin-left: 10px;
+  width: calc(100% - 120px);
+}
+
+.companyLogo img{
+  width: 100px;
+  height: 100px;
+  border-radius:50% ;
+}
+
+
+#singleJobDescription{
+  background-color: rgb(239, 253, 186);
+  /* max-width: 650px; */
+  width: 650px;
+  /* max-height: 85vh; */
+  height:85vh;
+  position: sticky;
+  top:70px;
+  overflow-y: scroll;
+  white-space: normal;
+  word-wrap: break-word;
+    border-radius: 15px;
+  /* padding: 10px; */
+  box-shadow: 0px 0px 2px 2px  rgb(44, 15, 15);;
+  text-align: justify;
+}
+#singleJobDescription::-webkit-scrollbar {
+  width: 0px;
+  /* background: red; */
+}
+
+.jobHeading{
+  background-color: rgb(102, 219, 204);
+  padding: 10px;
+  position: relative;
+  box-shadow: 0 2px 2px black;
+}
+
+#imgInHeader{
+  position: absolute;
+  right: 20px;
+  top:50%;
+  transform: translateY(-50%);
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.applyNow{
+  padding: 10px;
+}
+
+.applyNow button{
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-weight: bolder;
+  height:40px;
+  width:130px;
+}
+
+.applyNow button:hover{
+  font-size: 1.1rem;
+  background-color:rgb(58, 207, 150);
+}
+
+.applyNow i{
+  margin-left:15px;
+  font-size:1.5rem;
+  color:rgb(95, 95, 95);
+  cursor:pointer;
+}
+
+.jobDetails{
+  padding:10px;
+}
+
+.subHeading{
+  font-weight:bold;
+}
+
+/* -----------------media query-------------- */
+@media (max-width:768px) {
+  #jobs{
+    display: none;
+  }
+}
+
+@media (max-width:425px) {
+  #imgInHeader{
+    width: 70px;
+    height: 70px;
+  }
+}

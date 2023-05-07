@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,500&display=swap");
+
+/* font-family: 'Rubik', sans-serif;
+font-family: 'Ubuntu', sans-serif; */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+/*   background-image: url("/public/images/bodyBack2.png"); */
+  background-image: url("/public/images/homeBack.jpg");
+  background-attachment: fixed;
+}
+
+/* -------------------------navbar------------------ */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background-color: rgb(17, 82, 107);
+  box-shadow: 0px 2px 2px black;
+}
+#sparkLogo {
+  width: 200px;
+  margin-left: 8vw;
+}
+
+.searchBtn {
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  /* background-color: rgb(248, 175, 191); */
+  background-color: transparent;
+  border: none;
+}
+
+.searchBtn:hover {
+  transition: all 1s ease-in;
+  background-color: rgb(223, 127, 146);
+}
+
+.menuItem {
+  width: 80px;
+  cursor: pointer;
+  /* background-color: blue; */
+  border-radius: 5px;
+  transition: all 1s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.menuItem:hover {
+  background-color: rgba(57, 1, 59, 0.425);
+}
+
+.menuItem * {
+  margin: 0px;
+}
+
+.menuItem a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menuItem i {
+  color: aqua;
+}
+
+.menuItemName {
+  font-size: 12px;
+  color: white;
+}
+
+/* -------------------------modal------------- */
+
+.modal-header {
+  background-color: rgb(131, 241, 245);
+  padding: 5px 15px;
+}
+
+.modal-body {
+  background-color: rgb(246, 241, 241);
+}
+
+.modal-footer {
+  background-color: rgb(131, 241, 245);
+  padding: 5px 10px;
+}
+
+.modal-footer button {
+  background-color: rgb(1, 87, 90);
+  border: none;
+  transition: all 0.5s ease;
+}
+.modal-footer button:hover{
+  background-color: rgb(12, 55, 56);
+}
+
+/* -----------modal input fields---------- */
+.modal-header h1{
+  text-align: center !important;
+}
+
+.modalInput{
+  width: 100%;
+  padding-left: 20px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(49, 9, 94);
+  outline: none;
+  margin: 10px auto;
+
+}
+
+.modal-body .inputDiv{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.userProfileI i{
+  margin-right: 10px;
+  color:rgb(17, 82, 107) ;
+}
+.userProfileI a{
+  color: rgb(17, 82, 107);
+  font-size: 20px;
+}
+.userProfileI a:hover{
+  color: rgb(25, 126, 167);
+}
+
+
+/* ---------------------notification ------------------ */
+.notification{
+  position: absolute;
+  top: 70px;
+  right: 50px;
+  width: max-content;
+  padding: 5px 15px;
+  border-radius: 4px;
+  background-color: #141619;
+  color: #f6f5f9;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(30px);
+  opacity: 0;
+  visibility: hidden;
+  animation: fade-in 2s linear forwards;
+  z-index: 50;
+}
+
+.notification_progress{
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  width: 90%;
+  height: 3px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background-image: linear-gradient(to right, #539dbd, #3250bf);
+  border-radius: inherit;
+  animation: load 2s linear forwards;
+}
+
+@keyframes fade-in{
+  5%{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+  90%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes load{
+  to{
+    transform: scaleX(1);
+  }
+}
+
+/* ---------------------media query------------------------ */
+@media (max-width:645px) {
+  #sparkLogo {
+    width: 150px;
+    margin-left: 4vw;
+  }
+
+  .menuItem {
+    width: 60px;
+  }
+
+  .menuItemName {
+    font-size: 10px;
+  }
+}
+
+@media (max-width:450px) {
+  #sparkLogo {
+    width: 120px;
+    margin-left: 2vw;
+  }
+
+  .menuItem {
+    width: 50px;
+  }
+
+  .menuItem i{
+    font-size: 12px;
+  }
+
+  .menuItemName {
+    font-size: 8px;
+  }
+}
+
+@media (max-width:355px) {
+  .menuItem {
+    width: 40px;
+  }
+}

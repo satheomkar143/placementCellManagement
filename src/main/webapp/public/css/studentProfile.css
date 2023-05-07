@@ -1,0 +1,291 @@
+.profileContainer{
+  /* background-color: red; */
+  width: 90vw;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  position: relative;
+}
+
+.infoAndThought{
+  display: flex;
+  justify-content: space-around;
+  /* background-color: aqua; */
+}
+
+.infoDiv{
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 70%; 
+  background: rgb(26, 131, 134);
+  padding:10px;
+  padding-bottom:0 ;
+  box-shadow: 0 0 2px 2px rgb(9, 63, 80);
+}
+
+.subMainDiv{
+	position:relative;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  text-align: justify;
+  box-shadow: 0px 0px 1px 1px rgb(36, 35, 35);
+  
+}
+
+.profilePhoto{
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  left: 60px;
+  top: 220px;
+  border: 2px solid white;
+}
+
+.editProfile{
+  position: absolute;
+  font-size: 30px;
+  right: 5%;
+  top: 330px;
+  color: blueviolet;
+  cursor: pointer;
+}
+.editProfile:hover{
+  font-size: 35px;
+}
+
+.changeProfilePhoto{
+	position: absolute;
+	left: 200px;
+	top: 340px;
+	cursor: pointer;
+}
+.changeProfilePhoto:hover{
+	color: blueviolet;
+}
+
+.changeBackPhoto{
+	position: absolute;
+	right: 3%;
+	top: 20px;
+	cursor: pointer;
+}
+.changeBackPhoto:hover{
+	color: blueviolet;
+}
+
+
+.backImage{
+  width: 100%;
+  height: 300px;
+}
+
+.personalInfo{
+
+  margin-top: 80px;
+  padding: 5px 35px 5px 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between; 
+}
+.personalInfoDiv{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  /* background-color: red; */
+  width: 60%;
+}
+
+.personalInfo p{
+  margin: 2px;
+  padding: 0;
+}
+
+.sideTabs{
+  position: relative;
+  /* background-color: aquamarine; */
+}
+.sideTabs i{
+  color: rgb(7, 119, 119);
+  margin-right: 10px;
+}
+
+.sideTabs p{
+  margin-bottom: 10px;
+}
+
+.count{
+  background-color:rgb(7, 119, 119);
+  color: white;
+  display:flex;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: -25px;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.countSaved{
+  top:3px;
+}
+
+.countApplied{
+  top:38px;
+}
+
+.countPost{
+  top: 72px;
+}
+
+.sidePadding{
+  padding: 10px 20px;
+}
+
+.removeMargin p{
+  margin: 0;
+}
+
+.thought{
+background-color: white;
+  width: 25%;
+  height: 450px;
+margin-top:70PX ;
+border-radius: 20px;
+text-align: justify;
+padding: 50px 10px;
+font-size: 20px;
+color: rgb(14, 97, 21);
+box-shadow: 0px 0px 5px  gray;
+}
+.thought h3{
+  text-align: center;
+  color: blueviolet;
+}
+
+
+
+/* ---------------------modal--------------- */
+.editDataTagP{
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.editDataInput{
+  width: 80%;
+}
+.editDataInputLong, hr{
+  width: 90%;
+}
+
+.profileFlexDiv{
+  display: flex;
+}
+
+.profileFlexDiv div{
+  width: 100%;
+  /* background-color: aquamarine; */
+}
+
+textarea{
+  width: 90%;
+  height: 80px;
+}
+
+.educationDiv{
+  position: relative;
+}
+
+.educationDiv i{
+  position: absolute;
+  right: 10%;
+  top: 10%;
+  font-size: 30px;
+  color: gray;
+  cursor: pointer;
+}
+
+.skillDiv i{
+  top:0px !important;
+}
+
+.addMultiEducation{
+	position: relative;
+}
+
+.deleteEducation{
+	position: absolute;
+	right: 10%;
+}
+
+/* -----------------media query-------------- */
+@media (max-width:768px) {
+  .infoDiv{
+    width: 100%;
+  }
+
+  .profilePhoto{
+    width: 100px;
+    height: 100px;
+    top: 150px;
+    left: 20px;
+  }
+
+  .backImage{
+    width: 100%;
+    height: 200px;
+  }
+
+  .editProfile{
+    top: 230px;
+    font-size: 20px;
+    right:20px ;
+  }
+  .editProfile:hover{
+    font-size: 22px;
+  }
+  
+  .changeProfilePhoto{
+    top: 230px;
+    left: 120px;
+  }
+
+  .personalInfo{
+    margin-top: 50px;
+    padding: 5px 20px;
+  }
+
+  .personalInfo{
+    padding-right: 50px;
+  }
+}
+
+@media (max-width:400px) {
+  .personalInfo{
+    padding-right: 30px;
+    padding-left: 5px;
+  }
+  .profileContainer{
+    width: 95vw;
+  }
+  .editProfile{
+    right: 10px;
+  }
+  .sideTabs i{
+    display: none;
+  }
+  .sideTabs p{
+    font-size: 15px;
+  }
+  .infoDiv{
+    padding:5px;
+  }
+  .sidePadding{
+    padding: 10px 5px;
+  }
+
+}

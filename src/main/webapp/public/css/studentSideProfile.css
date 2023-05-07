@@ -1,0 +1,79 @@
+#mainSideProfile{
+  display: flex;
+}
+
+#sideProfileDiv{
+  position: sticky;
+  top: 70px;
+  margin: 10px 5vw;
+  font-family: 'Ubuntu', sans-serif; 
+  /* min-width: 25vw; */
+  width: 25vw;
+  height: 550px;
+/*   box-shadow: 2px 2px 5px rgb(44, 1, 1); */
+box-shadow: 0px 0px 2px 1px   rgb(65, 70, 69);
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+#sideProfileDiv i{
+  color: rgb(7, 119, 119);
+  margin-right: 10px;
+  
+}
+
+#sideProfileImg{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  border-radius: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60px;
+  border: 2px solid white;
+}
+
+.ps-3{
+  position: relative;
+}
+.count{
+  background-color:rgb(7, 119, 119);
+  color: white;
+  display:flex;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 150px;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50%;
+}
+
+.countSaved{
+  top:3px;
+}
+
+
+.countApplied{
+  top:43px;
+}
+
+.countPost{
+  top: 83px;
+}
+
+
+/* --------------------------media query--------------- */
+@media (max-width:768px) {
+#sideProfileDiv{
+  display: none;
+}
+#mainSideProfile{
+  justify-content: center;
+}
+}

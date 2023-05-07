@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+	new job form
+	
+		<form action="/jobdetail" method="post">
+		jobType<input type="text" name="jobType"><br>
+		salary<input type="text" name="salary"><br>
+		education<input type="text" name="education"><br>
+		company<input type="text" name="company"><br>
+		location<input type="text" name="location"><br>
+		vacancies<input type="text" name="vacancies"><br>
+		jobSummery<textarea rows="10" cols="10" name="jobSummery"></textarea>
+		keySkills
+		<div id="skills">
+			<a onclick="addSkills()">add new skill</a>
+			<input type="text" name="keySkills"><br>	
+		</div>
+		responsibility
+		<div id="resp">
+			<a onclick="addResp()">add new responsibility</a>
+			<input type="text" name="responsibility"><br>	
+		</div>
+		<input type="submit">
+	</form>
+	
+	
+	
+	
+	<script type="text/javascript">
+		
+		let skillDiv = document.getElementById("skills");
+		let skillResp = document.getElementById("resp");
+
+		addSkills = ()=>{
+			let newInput = document.createElement("input");
+			newInput.type = "text";
+			newInput.name = "keySkills";
+			
+			skillDiv.appendChild(newInput);
+
+		}
+		
+		addResp = ()=>{
+			let newInput = document.createElement("input");
+			newInput.type = "text";
+			newInput.name = "responsibility";
+			
+			skillResp.appendChild(newInput);
+		}
+	
+	</script>
+</body>
+</html>
